@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Dongle', sans-serif;
+  color: white;
+  height: 30.3rem;
+
+
 }
 
 .App-logo {
@@ -32,7 +39,185 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+.childDivTime {
+  margin-top: 4rem;
+}
+
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.childDiv {
+  border: 2px solid white;
+  border-radius: 2rem;
+  display: flex;
+  column-gap: 0rem;
+  flex-direction: column;
+  padding: 0.9rem;
+  background-color: rgb(14, 14, 62);
+}
+
+.inputBTN {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.inputBTN input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #A865B5;
+  font-family: 'Dongle', sans-serif;
+  font-size: 2rem;
+  background-color: rgb(14, 14, 62);
+  width: 13rem;
+  height: 1.3rem;
+  caret-color: #A865B5;
+  color: white;
+}
+
+.inputBTN button {
+  outline: none;
+  border: none;
+  border-radius: 50rem;
+  cursor: pointer;
+  background-color: #A865B5;
+  color: white;
+  font-weight: 900;
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.inputBTN button:hover {
+  background-color: rgb(77, 226, 77);
+}
+
+h1 {
+  margin-top: 0rem;
+  margin-bottom: .3rem;
+  font-size: 3rem;
+}
+
+ul {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: -.5rem;
+  height: 15rem;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.ul2 {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.BtnSub {
+  border-radius: 60%;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1rem;
+  background-color: #A865B5;
+  color: white;
+  padding: 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.BtnSub:hover {
+  background-color: rgb(255, 79, 79);
+}
+
+li {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+
+.todo_style {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  justify-content: center;
+  width: fit-content;
+  margin-left: -2rem;
+  margin-right: .4rem;
+}
+
+.MainTime {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Time {
+  font-size: 2rem;
+  border: 2px solid white;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  background-color: rgb(14, 14, 62);
+}
+
+.headH1 {
+  border-bottom: 2px solid White;
+  border-top: 2px solid White;
+}
+
+
+/* tab  Query */
+
+@media (max-width:1324px) {
+  .mainDiv {
+    margin-top: 1rem;
+  }
+}
+
+/* Phone Media Query */
+
+@media (max-width:768px) {
+  .mainDiv {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:296px) {
+
+  .inputBTN input {
+    width: 9rem;
+  }
+
+  .head1 {
+    font-size: 2.3rem;
+  }
+
+  .MainTime {
+    column-gap: 0.3rem;
+  }
+
+  .Time {
+    padding: 0.4rem;
+    gap: 0.5rem;
+  }
+
+}
+
+;
