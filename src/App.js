@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import ListEntry from './ListEntry';
 import CurTime from './CurTime';
 import './App.css';
 
 
 function App() {
+  const local_Storage_key = "arr";
+  const local_Storage_key2 = "arr2";
   const [work, setWork] = useState("");
-  const [arr, setArr] = useState([]);
-  const [arr2, setArr2] = useState([]);
+  const [arr, setArr] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem(local_Storage_key);
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
 
+  const [arr2, setArr2] = useState(() => {
+    // getting stored value
+    const saved2 = localStorage.getItem(local_Storage_key2);
+    const initialValue2 = JSON.parse(saved2);
+    return initialValue2 || "";
+  });
 
+  useEffect(() => {
+    localStorage.setItem(local_Storage_key, JSON.stringify(arr));
+  }, [arr]);
+
+  useEffect(() => {
+    localStorage.setItem(local_Storage_key2, JSON.stringify(arr2));
+  }, [arr2]);
 
   const ItemEvents = (e) => {
     setWork(e.target.value);
